@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#logo {
+    width: 700px;
+    display: block;
+    border-bottom: 1px rgb(101, 112, 112) double;
+    padding-bottom: 25px ;
+}
+#mainIndex {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    padding: 0px
+}
+
+#listaLibros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    width: 100%; 
+    margin: 50px;
+    padding: 50px
+}
+
+.bookCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 45%;
+    height: 200px;
+    margin: 10px 0 25px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(138, 139, 139);
+    box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+}
+.botonRead {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(138, 139, 139);
+    box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+}
+.encabezadoCard {
+    gap: 25px
+}
+@media (min-width: 800px){
+    .botonRead {
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid rgb(138, 139, 139);
+        box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+    }
+    .bookCard {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        width: 30%;
+        height: 200px;
+        margin: 10px 0 25px 0;
+        border-radius: 5px;
+        border: 1px solid rgb(138, 139, 139);
+        box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+    }
+
+}
+@media (min-width: 1200px){
+    .botonRead {
+        width: 50%;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid rgb(138, 139, 139);
+        box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+    }
+    .bookCard {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        width: 22%;
+        height: 200px;
+        margin: 10px 0 25px 0;
+        border-radius: 5px;
+        border: 1px solid rgb(138, 139, 139);
+        box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+    }
+
+}
