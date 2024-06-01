@@ -1,5 +1,5 @@
 // VARIABLES
-const listaLibros = document.querySelector('#listaLibros');
+const listaLibros1 = document.querySelector('#listaLibros1');
 const URL = 'https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=jJgyyVhUzpWhDDqn1MdittMq1PfrAH1q';
 const fragment = document.createDocumentFragment();
 
@@ -35,7 +35,7 @@ const pintarCuerpo = (resp) => {
         bookCard.classList.add('bookCard');
 
         const nombreLista = document.createElement('h3')
-        nombreLista.classList.add('encabezadoCard')
+        nombreLista.classList.add('encabezadoCard1')
         nombreLista.innerHTML = element.display_name;
         const contenidoCard = document.createElement('div')
         const updated = document.createElement('p');
