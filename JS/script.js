@@ -5,9 +5,14 @@ const subtitulo = document.querySelector('#subtitulo');
 const mainIndex = document.querySelector('#mainIndex');
 const URLPrincipal = 'https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=jJgyyVhUzpWhDDqn1MdittMq1PfrAH1q';
 const fragment = document.createDocumentFragment();
+const loader = document.getElementById('loaderPagina');
 
 // EVENTOS 
 document.addEventListener('DOMContentLoaded', () => {
+    showLoader()
+    setTimeout(() => {
+        hideLoader();
+    }, 1000);
     llamarAPIPrincipal()
         .then((resp) => {
             pintarCuerpo(resp);
@@ -20,18 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', ({ target }) => {
     if (target.textContent == 'READ MORE!') {
         const categoria = target.id
+        showLoader()
+        setTimeout(() => {
+            hideLoader();
+        }, 1000);
         llamarAPISecundaria(categoria)
             .then((resp1) => {
                 pintarSeleccion(resp1);
             })
             .catch((error1) => {
                 console.log(error1)
+
             })
     }
 
     if (target.matches('.buttonBack')) {
         limpiar(mainIndex);
         limpiar(subtitulo);
+        showLoader()
+        setTimeout(() => {
+            hideLoader();
+        }, 1000);
         llamarAPIPrincipal()
             .then((resp1) => {
                 pintarCuerpo(resp1);
@@ -43,9 +57,23 @@ document.addEventListener('click', ({ target }) => {
 
     if (target.textContent == 'BUY AT AMAZON') {
         let urlAmazon = target.id;
+        showLoader()
+        setTimeout(() => {
+            hideLoader();
+        }, 1000);
         window.open(urlAmazon, '_blank')
     }
 });
+/* window.addEventListener('DOMContentLoaded', () => {
+    showLoader();
+})
+window.addEventListener('load', () => {
+    showLoader();
+    setTimeout(() => {
+        hideLoader();
+    }, 2000);
+
+}) */
 
 // FUNCIONES
 const llamarAPIPrincipal = async () => {
@@ -85,7 +113,7 @@ const pintarCuerpo = (resp) => {
         const nombreLista = document.createElement('h3')
         nombreLista.classList.add('encabezadoCard')
         nombreLista.innerHTML = element.display_name;
-        const contenidoCard = document.createElement('div')
+        const contenidoCard = document.createElement('article')
         const updated = document.createElement('p');
         updated.innerHTML = `Updated: ${element.updated}`;
         const oldest = document.createElement('p');
@@ -120,7 +148,7 @@ const pintarSeleccion = (resp1) => {
 
     arrayLibros.forEach((elemento) => {
 
-        const cardsRank = document.createElement('div');
+        const cardsRank = document.createElement('article');
         cardsRank.classList.add('cardsRank');
         const tituloRank = document.createElement('h5');
         tituloRank.textContent = `#${elemento.rank} ${elemento.title}`
@@ -144,4 +172,12 @@ const pintarSeleccion = (resp1) => {
 }
 const limpiar = (elemento) => {
     elemento.innerHTML = '';
+}
+
+const showLoader = () => {
+    loader.classList.add('show_loader')
+}
+
+const hideLoader = () => {
+    loader.classList.remove('show_loader')
 }
