@@ -47,11 +47,6 @@ document.addEventListener('click', ({ target }) => {
     }
 });
 
-window.addEventListener('load', ()=>{
-    document.getElementById('loader').classList.toggle('hidden')
-})
-
-
 // FUNCIONES
 const llamarAPIPrincipal = async () => {
     try {
