@@ -9,12 +9,13 @@
   position: sticky;
   top: 0;
   background-color: white;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 #barraFiltro {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
 }
 
 .logo {
@@ -38,8 +39,6 @@
   justify-content: space-around;
   width: 100%;
   margin: 10px;
-  margin-top: 20px;
-  padding-top: 20px;
 }
 
 .bookCard {
@@ -48,7 +47,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
-  width: 45%;
+  width: 90%;
   height: 200px;
   margin: 10px 0 25px 0;
   border-radius: 5px;
@@ -76,6 +75,7 @@
 
 .buttonBack {
   display: inline;
+  width: 60%;
   margin-top: 25px;
   margin-left: 25px;
   background-color: rgb(180, 36, 36);
@@ -96,8 +96,13 @@
   font-size: 30px;
 }
 
-#filtroUpt, #inputFiltro, #selectFiltro, #selectSeleccion, #inputAutor, #inputLibro{
-  width: 200px;
+#filtroUpt,
+#inputFiltro,
+#selectFiltro,
+#selectSeleccion,
+#inputAutor,
+#inputLibro {
+  width: 90%;
   height: 40px;
   border-radius: 5px;
   padding: 5px;
@@ -110,7 +115,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
-  width: 45%;
+  width: 90%;
   height: 700;
   margin: 10px 0 25px 0;
   border-radius: 5px;
@@ -195,8 +200,68 @@
   }
 }
 
+@media (min-width: 400px) {
+  #barraFiltro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mainIndex {
+    top: 0px;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 0px
+  }
+
+  #listaLibros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: justify;
+    padding-left: opx;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .bookCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    padding: 10px;
+    width: 90%;
+    height: 200px;
+    margin: 10px 0 25px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(138, 139, 139);
+    box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+  }
+
+  .cardsRank {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    width: 90%;
+    height: 700;
+    margin: 10px 0 25px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(138, 139, 139);
+    box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+  }
+}
+
 
 @media (min-width: 800px) {
+  #barraFiltro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .botonRead {
     width: 100%;
     background-color: white;
@@ -221,7 +286,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
-    width: 30%;
+    width: 45%;
     height: 200px;
     margin: 10px 0 25px 0;
     border-radius: 5px;
@@ -235,8 +300,8 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
-    width: 30%;
-    height: 600px;
+    width: 45%;
+    height: 950px;
     margin: 10px 0 25px 0;
     border-radius: 5px;
     border: 1px solid rgb(138, 139, 139);
@@ -255,6 +320,37 @@
     border-radius: 5px;
     border: 1px solid rgb(138, 139, 139);
     box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3)
+  }
+
+  #barraFiltro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .buttonBack {
+    display: inline;
+    width: 30%;
+    margin-top: 25px;
+    margin-left: 25px;
+    background-color: rgb(180, 36, 36);
+    color: white;
+    border: 1px solid rgb(138, 139, 139);
+    box-shadow: 2px 2px 2px 1px rgba(104, 101, 101, 0.3);
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  #filtroUpt,
+  #inputFiltro,
+  #selectFiltro,
+  #selectSeleccion,
+  #inputAutor,
+  #inputLibro {
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
   }
 
   .amazonButton {
@@ -288,7 +384,7 @@
     justify-content: space-between;
     padding: 10px;
     width: 22%;
-    height: 600px;
+    height: 800px;
     margin: 10px 0 25px 0;
     border-radius: 5px;
     border: 1px solid rgb(138, 139, 139);
