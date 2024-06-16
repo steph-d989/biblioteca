@@ -7,9 +7,5 @@
 
 ## EJERCICIO: Biblioteca :octocat: :scroll: :bangbang: :books: :book:
 
-Utilizando la [API del NYTimes](https://developer.nytimes.com/apis) vamos a crear una biblioteca de los libros más vendidos por temática
-
-![NYT_logo](../../assets/js_avanzado/biblioteca/nyt.svg)
-
-Ofreceremos al cliente un dashboard con la listas disponibles en *[Books API](https://developer.nytimes.com/docs/books-product/1/overview)*.
+Utilizando la [API del NYTimes](https://developer.nytimes.com/apis) hemos creado una Biblioteca, la cual permite al usuario, revisar los libros que brinda la API por categoria, y dentro de cada una de las categorías, el ranking con los libros mas representativos.
 
