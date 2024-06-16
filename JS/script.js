@@ -429,112 +429,7 @@ const filtroCuerpo = (resp) => {
         pintarCuerpo(resp);
     }
 }
-/* const filtroSeleccion = (resp) => {
-    const selectSeleccion = document.getElementById('selectSeleccion');
-    const filtrado = selectSeleccion.selectedOptions[0].id;
-    console.log(`Filtrado seleccionado: ${filtrado}`);
-    
-    let dataFiltroSelect = resp.books;
-    limpiar(mainIndex);
-    limpiar(barraFiltro);
-    
-    const filtros = {
-        'AZAutor': (a, b) => a.author.localeCompare(b.author),
-        'ZAAutor': (a, b) => b.author.localeCompare(a.author),
-        'AZTitulo': (a, b) => a.title.localeCompare(b.title),
-        'ZATitulo': (a, b) => b.title.localeCompare(a.title)
-    };
-    
-    if (filtros[filtrado]) {
-        showLoader();
-        setTimeout(() => {
-            hideLoader();
-            let respuesta = dataFiltroSelect.sort(filtros[filtrado]);
-            pintarLibros(respuesta, resp.list_name);
-        }, 1000);
-    } else {
-        pintarSeleccionCuerpo(resp);
-    }
-};
 
-const pintarLibros = (libros, listName) => {
-    const fragment = document.createDocumentFragment();
-    const lista = document.createElement('section');
-    lista.setAttribute('id', 'listaLibros');
-    subtitulo.textContent = listName;
-    let formulario = document.createElement('form')
-        let select = document.createElement('select')
-        select.setAttribute('id', 'selectSeleccion')
-        let option = document.createElement('option')
-        option.innerHTML = 'Elige el filtro...'
-        let opt1 = document.createElement('optgroup')
-        opt1.setAttribute('label', 'Ordenar por autor...')
-        opt1.innerHTML = `<option id='AZAutor'>Ascendente</option><option id='ZAAutor'>Descendente</option>`
-        let opt2 = document.createElement('optgroup')
-        opt2.setAttribute('label', 'Ordenar por titulo...')
-        opt2.innerHTML = `<option id='AZTitulo'>Ascendente</option><option id='ZATitulo'>Descendente</option>`
-        select.append(option, opt1, opt2)
-        formulario.append(select)
-
-        let formAutor = document.createElement('form')
-        formAutor.setAttribute('id', 'formAutor')
-        let inputAutor = document.createElement('input');
-        inputAutor.setAttribute('id', 'inputAutor')
-        inputAutor.setAttribute('type', 'text');
-        inputAutor.setAttribute('list', 'autores')
-        inputAutor.setAttribute('placeholder', 'Ingresa el autor...')
-        let dataList = document.createElement('datalist')
-        dataList.setAttribute('id', 'autores')
-        dataList.append(pintarDataAutor(resp))
-        formAutor.append(inputAutor, dataList)
-
-        let formLibro = document.createElement('form')
-        formLibro.setAttribute('id', 'formlibro')
-        let inputlibro = document.createElement('input');
-        inputlibro.setAttribute('id', 'inputLibro')
-        inputlibro.setAttribute('type', 'text');
-        inputlibro.setAttribute('list', 'libros')
-        inputlibro.setAttribute('placeholder', 'Ingresa el libro...')
-        let dataListLibro = document.createElement('datalist')
-        dataListLibro.setAttribute('id', 'libros')
-        dataListLibro.append(pintarDataLibro(resp))
-        formLibro.append(inputlibro, dataListLibro)
-        barraFiltro.append(formLibro, formAutor, formulario,)
-
-        const seccionBoton = document.createElement('section')
-        seccionBoton.setAttribute('class', 'seccionBotonBack')
-        const botonBack = document.createElement('button')
-        botonBack.classList.add('buttonBack')
-        botonBack.innerHTML = `BACK TO INDEX`
-        seccionBoton.append(botonBack)
-
-        subtitulo.textContent = `${resp.list_name}`;
-    libros.forEach((elemento) => {
-        const cardsRank = document.createElement('article');
-        cardsRank.classList.add('cardsRank');
-        const tituloRank = document.createElement('h5');
-        tituloRank.textContent = `#${elemento.rank} ${elemento.title}`;
-        const imagenRank = document.createElement('img');
-        imagenRank.setAttribute('src', elemento.book_image);
-        imagenRank.setAttribute('alt', elemento.title);
-        imagenRank.classList.add('fotoPortada');
-        const descripcion = document.createElement('p');
-        descripcion.textContent = elemento.description || "no hay descripción del libro";
-        const weeksRank = document.createElement('p');
-        weeksRank.textContent = `Weeks on List: ${elemento.weeks_on_list}`;
-        const botonAmazon = document.createElement('button');
-        botonAmazon.textContent = 'BUY AT AMAZON';
-        botonAmazon.classList.add('amazonButton');
-        botonAmazon.setAttribute('id', elemento.amazon_product_url);
-        cardsRank.append(tituloRank, imagenRank, descripcion, botonAmazon);
-        fragment.append(cardsRank);
-    });
-    
-    lista.append(fragment);
-    mainIndex.append(lista);
-};
-
- */
 const filtroSeleccion = (resp) => {
     const selectSeleccion = document.getElementById('selectSeleccion');
     const filtrado = selectSeleccion.selectedOptions[0].id;
@@ -865,33 +760,6 @@ const filtroSeleccion = (resp) => {
     } else {
         pintarSeleccionCuerpo(resp);
     }
-    /* inputAutor.addEventListener('input', esperar(() => {
-        llamarAPISecundaria(categoria)
-            .then((resp) => {
-                filtrarDisplayAutor(resp);
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, 300));
-    inputlibro.addEventListener('input', esperar(() => {
-        llamarAPISecundaria(categoria)
-            .then((resp) => {
-                filtrarDisplayLibro(resp);
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, 300));
-    selectSeleccion.addEventListener('change', () => {
-        llamarAPISecundaria(categoria)
-            .then((resp) => {
-                filtroSeleccion(resp);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }) */
 } 
 const filtrarCuerpo = (resp) => {
     const filtroUpt = document.getElementById('filtroUpt');
