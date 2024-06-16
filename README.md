@@ -12,5 +12,5 @@ Utilizando la [API del NYTimes](https://developer.nytimes.com/apis) hemos creado
 ---
 
 En la primera vista de la pagina encontramos tres filtros, los que nos permiten realizar búsquedas por la categoría deseada, establecer filtros por orden ascendente y descendente, por las diferentes categorías, fecha de la primera y la última publicación y un filtro por la fecha en la que se realizan las actualizaciones de los contenidos.
-![Vista Pagina Principal]([https://github.com/steph-d989/biblioteca/tree/develop/assets](https://github.com/steph-d989/biblioteca/blob/develop/assets/Vista%20pagina%20principal.png))
+![Vista Pagina Principal](https://github.com/steph-d989/biblioteca/blob/main/assets/Vista%20pagina%20principal.png)
 
