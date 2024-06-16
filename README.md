@@ -11,6 +11,8 @@ Utilizando la [API del NYTimes](https://developer.nytimes.com/apis) hemos creado
 
 <br>
 
+### 1. Descripción del proyecto.
+
 En la primera vista de la pagina encontramos tres filtros, los que nos permiten realizar búsquedas por la categoría deseada, establecer filtros por orden ascendente y descendente, por las diferentes categorías, fecha de la primera y la última publicación y un filtro por la fecha en la que se realizan las actualizaciones de los contenidos.
 
 <br>
@@ -19,7 +21,7 @@ En la primera vista de la pagina encontramos tres filtros, los que nos permiten 
 
 <br>
 
-En cada una de las vistas por libro encontramos una descripción, y la alternativa a ser direccionados a la pagina de Amazon para la compra del libro.
+En la vista de cada una de las categorías, encontramos en orden por ranking de preferencias, también encontramos filtros, los cuales nos permiten acceder a una búsqueda, por nombre y autor de cada uno de los libros, y establecer un orden ascendente y descendente.
 
 <br>
 
@@ -33,5 +35,45 @@ En cada una de las vistas por libro encontramos una descripción, y la alternati
 
 <br>
 
-***
+### 2. Requisitos Previos
 
+- Navegador web moderno (Chrome, Firefox, Edge, etc.).
+- Conexión a Internet para realizar llamadas a la API.
+- Conocimiento básico de HTML, CSS y JavaScript.
+
+<br>
+
+### 3. Instalacion
+
+- Clona el repositorio en tu ordenador.
+   https://github.com/steph-d989/biblioteca.git
+
+<br>
+
+### 4. Uso
+
+- Al cargar la página, se mostrará un cargador y se realizará una llamada a la API principal para obtener y mostrar el contenido inicial.
+- Utiliza los filtros disponibles para buscar libros por categoría, ordenar por fecha y establecer otros criterios de búsqueda.
+- Haz clic en "READ MORE!" para ver más detalles de un libro en particular.
+- Haz clic en "BUY AT AMAZON" para abrir una nueva pestaña con el enlace de Amazon correspondiente.
+
+<br>
+
+### 5. Estructura del Proyecto
+
+- index.html: Archivo principal de la página.
+- style.css: Estilos CSS para la página.
+- script.js: Lógica del frontend en JavaScript.
+- assets/: Carpeta que contiene las imágenes utilizadas en el proyecto.
+
+<br>
+
+### 6. Contribución
+
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+
+- Haz un fork del repositorio.
+- Crea una nueva rama (git checkout -b nueva-rama).
+- Realiza tus cambios y haz commit (git commit -am 'Agrega nueva característica').
+- Sube tus cambios a la rama (git push origin nueva-caracteristica).
+- Abre un Pull Request.
