@@ -15,5 +15,12 @@ En la primera vista de la pagina encontramos tres filtros, los que nos permiten 
 
 <br>
 
-![Vista Pagina Principal](https://github.com/steph-d989/biblioteca/blob/main/assets/Vista%20pagina%20principal.png)
+![Vista Pagina Principal](./assets/Vista%20pagina%20secundaria.png)
 
+<br>
+
+En cada una de las vistas por libro encontramos una descripción, y la alternativa a ser direccionados a la pagina de Amazon para la compra del libro.
+
+<br>
+
+![Vista por libro](./assets/Vista%20libros.png)
