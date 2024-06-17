@@ -45,8 +45,8 @@ En cada una de las vistas por libro encontramos una descripción, y la alternati
 
 ### 3. Instalacion
 
-- Clona el repositorio en tu ordenador.
-   https://github.com/steph-d989/biblioteca.git
+- Accede a la Pagina
+https://steph-d989.github.io/biblioteca
 
 <br>
 
